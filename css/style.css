@@ -156,17 +156,15 @@ header.site {
   align-items: center;
 }
 
-/* The app screenshots are real, tall menu-bar-panel crops (not wide
-   marketing scenes) — cap their width so they sit at a natural size
-   instead of stretching to fill the whole grid column. */
-.hero-shot,
-.showcase-img {
+/* The app screenshot is a real, tall menu-bar-panel crop (not a wide
+   marketing scene) — cap its width so it sits at a natural size instead
+   of stretching to fill the whole grid column. */
+.hero-shot {
   display: flex;
   justify-content: center;
 }
 
-.hero-shot img,
-.showcase-img img {
+.hero-shot img {
   width: 100%;
   max-width: 300px;
 }
@@ -243,47 +241,6 @@ section {
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 10px;
-}
-
-/* ---------- Feature showcase (screenshot + text rows) ---------- */
-
-.showcase {
-  display: grid;
-  gap: 88px;
-}
-
-.showcase-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-}
-
-.showcase-row.reverse .showcase-text {
-  order: 2;
-}
-
-.showcase-row.reverse .showcase-img {
-  order: 1;
-}
-
-.showcase-text h3 {
-  font-size: 26px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  margin: 0 0 14px;
-}
-
-.showcase-text p {
-  color: var(--text-muted);
-  font-size: 16px;
-  margin: 0;
-}
-
-.showcase-img img {
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
 }
 
 /* ---------- Feature grid ---------- */
@@ -521,16 +478,6 @@ footer.site {
 
   .hero-shot {
     order: -1;
-  }
-
-  .showcase-row,
-  .showcase-row.reverse .showcase-text,
-  .showcase-row.reverse .showcase-img {
-    order: initial;
-  }
-
-  .showcase-row {
-    grid-template-columns: 1fr;
   }
 
   .grid {
