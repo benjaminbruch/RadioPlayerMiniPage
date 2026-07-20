@@ -104,6 +104,32 @@ header.site {
   color: var(--text);
 }
 
+/* ---------- Language switch ---------- */
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.lang-switch a {
+  padding: 5px 9px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text-faint);
+}
+
+.lang-switch a.active {
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.lang-switch a:hover:not(.active) {
+  color: var(--text-muted);
+}
+
 /* ---------- Buttons ---------- */
 
 .btn {
