@@ -568,8 +568,32 @@ footer.site {
   .grid {
     grid-template-columns: 1fr;
   }
+}
 
-  .nav-links span.hide-mobile {
+/* Below this, the full nav (brand + 3 links + language switch + download
+   button) no longer fits one row with no wrap. The nav links themselves
+   are non-essential here — everything they point to is also one scroll
+   away on the same page, or linked again from the footer — so they're
+   dropped first, keeping the brand, language switch, and primary CTA. */
+@media (max-width: 640px) {
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-links {
     display: none;
+  }
+
+  .btn-primary {
+    padding: 10px 16px;
+    font-size: 13.5px;
+  }
+}
+
+/* Narrow phones: the brand wordmark is the next thing to give up room to
+   the language switch and download button, which both stay fully usable. */
+@media (max-width: 400px) {
+  .brand {
+    font-size: 0;
   }
 }
