@@ -186,9 +186,9 @@ header.site {
    marketing scene) — cap its width so it sits at a natural size instead
    of stretching to fill the whole grid column. */
 .hero-shot {
-  width: 100%;
   display: flex;
   justify-content: center;
+  justify-self: center;
 }
 
 .hero-shot img {
@@ -331,9 +331,9 @@ section {
 }
 
 .discover-shot {
-  width: 100%;
   display: flex;
   justify-content: center;
+  justify-self: center;
 }
 
 .discover-shot img {
@@ -578,6 +578,11 @@ footer.site {
    away on the same page, or linked again from the footer — so they're
    dropped first, keeping the brand, language switch, and primary CTA. */
 @media (max-width: 640px) {
+  .hero.wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .nav {
     gap: 10px;
   }
